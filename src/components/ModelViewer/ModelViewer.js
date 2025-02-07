@@ -37,11 +37,11 @@ const ModelViewer = ({ item }) => {
   return (
     <div className="model-view">
       <model-viewer
-        key={item.id}
+        key={item._id}
         ref={model}
         style={modelViewer1}
-        src={item.modelSrc}
-        ios-src={item.iOSSrc}
+        src={item.blogImage}
+        ios-src={item.blogImage}
         alt="A 3D model"
         ar
         ar-modes="webxr scene-viewer quick-look"

@@ -34,17 +34,18 @@ const ProductList = ({ addToWishlist, wishlist, removeFromWishlist }) => {
         productItems.map((item, idx) => (
           <LazyLoad key={idx}>
             <div className="product-item">
-              {/* Check if the blogImage is an image or a .glb file */}
-              {item.blogImage.endsWith(".glb") ? (
-                <ModelViewer
-                  item={item}
-                  addToWishlist={addToWishlist}
-                  wishlist={wishlist}
-                  removeFromWishlist={removeFromWishlist}
-                />
-              ) : (
-                <img src={item.blogImage} alt={item.title} className="blog-image" />
-              )}
+            {/* Check if the blogImage is a .glb or .usdz file */}
+{item.blogImage.endsWith(".glb") || item.blogImage.endsWith(".usdz") ? (
+  <ModelViewer
+    item={item}
+    addToWishlist={addToWishlist}
+    wishlist={wishlist}
+    removeFromWishlist={removeFromWishlist}
+  />
+) : (
+  <img src={item.blogImage} alt={item.title} className="blog-image" />
+)}
+
               <h3>{item.title}</h3>
               <p>{item.about}</p>
             </div>

@@ -48,14 +48,14 @@ Below you will find the process and workflow used to review and merge your chang
   
 
 ```bash
-git clone https://github.com/<your-username>/AR-Webstore
+git clone https://github.com/<your-username>/3D Enhancer @aa
 ```
 
 - Keep a reference to the original project in `upstream` remote.
 
 ```bash  
-cd AR-Webstore  
-git remote add upstream https://github.com/ShwetKhatri2001/AR-Webstore
+cd 3D Enhancer @aa  
+git remote add upstream https://github.com/ShwetKhatri2001/3D Enhancer @aa
 git remote -v # To the check the remotes for this repository 
 ```  
 

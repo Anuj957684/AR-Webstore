@@ -27,9 +27,10 @@ const App = () => {
     <>
       <BrowserRouter>
         <Header />
+        
         <Routes>
           <Route
-            path="/"
+            path="/Home"
             element={
               <ProductList
                 addToWishlist={addToWishlist}
@@ -38,7 +39,7 @@ const App = () => {
               />
             }
           />
-          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route
             path="/wishlist"

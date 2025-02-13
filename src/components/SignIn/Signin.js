@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SignIn.css";
 import { Link } from "react-router-dom";
+
 const SignIn = () => {
     const [ error,setError ] = useState('')
     const [ signInDetails,setSignInDetails ] = useState({
@@ -34,6 +35,7 @@ const SignIn = () => {
     }
 
   return (
+    
     <main className="main-sign_in_container">
         <form onSubmit={handleSubmit} className="sign-in-container">
         <p className="error-paragraph">{error !== '' ? `Error: ${error}` : null}</p>
@@ -66,6 +68,7 @@ const SignIn = () => {
             <p className="sign-in-redirect-p">Don't have an account? <Link to="/sign-up">Sign up</Link></p>
     </form>
     </main>
+   
     
 
   );

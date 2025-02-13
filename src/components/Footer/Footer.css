@@ -3,11 +3,28 @@
   --text-color: #121212;
   --main-font: 2.2rem;
   --p-font: 1.1rem;
+  --primary: #ffcc00;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 .contact {
   padding: 50px 12%;
-  background: var(--text-color);
+  background: linear-gradient(135deg, #121212, #232323);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 15px;
+}
+
+/* Glassmorphism Effect */
+.contact::before {
+  content: "";
+  
+  inset: 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
 }
 
 .main-content {
@@ -23,24 +40,40 @@
   font-size: var(--p-font);
   font-weight: 600;
   margin-bottom: 15px;
-  transition: all 0.5s ease-in-out;
-  list-style: none;
-  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
-  width: fit-content;
-  margin-right: auto;
+  position: relative;
+}
+
+.contact-content a::before {
+  content: "";
+ 
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-content a:hover::before {
+  transform: scaleX(1);
 }
 
 .contact-content a:hover {
-  text-decoration: underline;
+  color: var(--primary);
+  transform: translateY(-2px);
 }
 
+/* 3D Input & Button */
 .action {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
+
 .action form {
   display: flex;
   justify-content: center;
@@ -48,31 +81,44 @@
   gap: 0 1rem;
 }
 
+.action form input[type="email"],
+.action form input[type="submit"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+/* 3D Email Input */
 .action form input[type="email"] {
   width: 460px;
   max-width: 100%;
-  padding: 12px 15px;
-  background: #222;
-  border: none;
-  outline: none;
-
+  background: linear-gradient(135deg, #222, #444);
   color: var(--bg-color);
-  font-size: 16px;
-  font-weight: 600;
+  box-shadow: inset 2px 2px 5px var(--shadow-color), 2px 2px 10px #000;
 }
 
+.action form input[type="email"]:focus {
+  background: linear-gradient(135deg, #333, #555);
+}
+
+/* 3D Submit Button */
 .action form input[type="submit"] {
-  padding: 12px 30px;
-  background: var(--bg-color);
-  border: none;
-  outline: none;
-
+  background: linear-gradient(135deg, var(--primary), #ff9900);
   color: var(--text-color);
-  font-size: 16px;
-  font-weight: 600;
   cursor: pointer;
+  box-shadow: 2px 4px 8px var(--shadow-color);
 }
 
+.action form input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 12px var(--shadow-color);
+}
+
+/* Footer Bottom Text */
 .last {
   width: 100%;
   text-align: center;
@@ -85,110 +131,31 @@
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 5px var(--shadow-color);
 }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #121212;
-  --main-font: 2.2rem;
-  --p-font: 1.1rem;
-}
-
-.contact {
-  padding: 50px 12%;
-  background: var(--text-color);
-}
-
-.contact-content a {
-  color: var(--bg-color);
-  display: block;
-  font-size: var(--p-font);
-  font-weight: 600;
-  margin-bottom: 15px;
-  transition: all 0.5s ease-in-out;
-  list-style: none;
-  scroll-behavior: smooth;
-  text-decoration: none;
-  width: fit-content;
-  margin-right: auto;
-}
-
-.contact-content a:hover {
-  text-decoration: underline;
-}
-
-.action {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-.action form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 1rem;
-}
-
-.action form input[type="email"] {
-  width: 460px;
-  max-width: 100%;
-  padding: 12px 15px;
-  background: #222;
-  border: none;
-  outline: none;
-
-  color: var(--bg-color);
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.action form input[type="submit"] {
-  padding: 12px 30px;
-  background: var(--bg-color);
-  border: none;
-  outline: none;
-
-  color: var(--text-color);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.last {
-  width: 100%;
-  text-align: center;
-  padding: 17px;
-  opacity: 70%;
-}
-
-.last p {
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
+/* Responsive Design */
 @media (max-width: 560px) {
   .contact {
     margin-top: 7rem;
+    padding: 40px 8%;
   }
+
   .main-content {
     margin-top: 5%;
   }
+
   .action {
     width: 100%;
   }
 
-  .action form input[type="email"] {
-    width: 100%;
-    box-sizing: border-box;
-  }
   .action form {
     flex-direction: column;
     gap: 1rem 0;
     width: 100%;
   }
+
+  .action form input[type="email"],
   .action form input[type="submit"] {
     width: 100%;
   }

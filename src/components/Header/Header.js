@@ -4,13 +4,13 @@ import "./styles.css";
 
 const Header = () => {
   const navigationLinks = [
-    { label: "Home", Path: "/" },
-    // { label:"WishList" ,Path:"/wishlist"},
-    // { label: "About", Path: "/about" },
-    // { label: "Feedback", Path: "/feedback" },
-    // { label: "Contact", Path: "/contact" },
-    // { label: "SignIn", Path: "/sign-in" },
-    // { label: "SignUp", Path: "/sign-up" },
+    { label: "Home", Path: "/Home" },
+    { label:"WishList" ,Path:"/wishlist"},
+    { label: "About", Path: "/about" },
+    { label: "Feedback", Path: "/feedback" },
+    { label: "Contact", Path: "/contact" },
+    { label: "SignIn", Path: "/sign-in" },
+    { label: "SignUp", Path: "/sign-up" },
   ];
   const [showMobileSidebar, setShowMobileSidebar] = useState(true);
   const handleItemClick = () => {
@@ -27,7 +27,7 @@ const Header = () => {
               onClick={() => showMobileSidebar && setShowMobileSidebar(false)}
               className="project-title"
             >
-          Anuj 
+         3D Enhancer @aa
             </Link>
           </h3>
           <div

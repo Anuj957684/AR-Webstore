@@ -4,7 +4,7 @@ const ContributorSection = () => {
   const [contributors, setContributors] = useState([]);
   const contRef = useRef(null);
   const owner = 'ShwetKhatri2001';
-  const repoName = 'AR-Webstore';
+  const repoName = '3D Enhancer @aa';
 
   useEffect(() => {
     if (contRef.current) {

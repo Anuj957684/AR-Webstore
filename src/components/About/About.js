@@ -58,6 +58,7 @@ const About = () => {
 
     return (
         <>
+        
             <div className="about-banner">
                 <div className="about-banner-front">
                     <div className="aboutleft"><div className="aboutleftsec fromtop-anim">AR Webstore</div>
@@ -87,7 +88,7 @@ const About = () => {
 
                     <div className="about-prob fade-effect">
                         <p className="about-prob-header" style={{ "padding": "1vh", "width": "70%" }}><i>Solution</i></p>
-                        <p className="about-prob-sol2"> With AR-Webstore,customers can visualize products
+                        <p className="about-prob-sol2"> With 3D Enhancer @aa,customers can visualize products
                             in their own spaces and view all the virtual features more clearly. This empowers
                             customers to make informed decisions, reduces return rates, and enhances
                             engagement, resulting in a more satisfying and immersive shopping journey.</p>

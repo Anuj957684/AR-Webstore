@@ -7,25 +7,25 @@ function Footer() {
     <div className="contact" id="contact">
       <div className="main-content">
         <div class="contact-content">
-          <Link to="/">  </Link>
+          <Link to="/">Contact  </Link>
           <Link
             to="/about"
           >
             
           </Link>
-          <Link to="/">  </Link>
-          <Link to="/">  </Link>
+          <Link to="/"> About </Link>
+          <Link to="/"> Git Hub </Link>
         </div>
 
         <div className="contact-content">
-          <Link to="/">  </Link>
-          <Link to="/">  </Link>
-          <Link to="/">  </Link>
+          <Link to="/">Linkedin</Link>
+          <Link to="/">  facebook</Link>
+          <Link to="/">   </Link>
         </div>
 
         <div className="contact-content">
           <Link to="/feedback">  </Link>
-          <Link to="mailto:shwetkhatri2001@gmail.com" target="_blank">
+          <Link to="mailto:anuj26777@gmail.com" target="_blank">
            
           </Link>
           <Link to="/"></Link>
@@ -49,7 +49,7 @@ function Footer() {
           </Link>
         </div>
       </div>
-{/* 
+
       <div class="action">
         <form onSubmit={(event) => event.preventDefault()}>
           <input
@@ -61,7 +61,7 @@ function Footer() {
           <input type="submit" name="submit" value="Submit" required></input>
         
         </form>
-      </div> */}
+      </div>
       <div class="last">
         <p></p>
       </div>
